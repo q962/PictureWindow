@@ -1,0 +1,114 @@
+#
+# q962 <q962_@outlook.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Untitled project\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-09 17:58+0800\n"
+"PO-Revision-Date: 2026-03-09 18:03+0800\n"
+"Last-Translator: q962 <q962_@outlook.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 49.0\n"
+
+#: AppWindow.c:286
+msgid "自适应缩放"
+msgstr "Adaptive scaling"
+
+#: AppWindow.c:287
+msgid "居中"
+msgstr "Center"
+
+#: AppWindow.c:288
+msgid "缩放至 100%"
+msgstr "Zoom to 100%"
+
+#: AppWindow.c:305
+msgid "缩放至"
+msgstr "Zoom to"
+
+#: AppWindow.c:314
+msgid "透明"
+msgstr "Transparent"
+
+#: AppWindow.c:315
+msgid "灰色"
+msgstr "Gray"
+
+#: AppWindow.c:316
+msgid "白色"
+msgstr "White"
+
+#: AppWindow.c:317
+msgid "黑色"
+msgstr "Black"
+
+#: AppWindow.c:318
+msgid "主题色"
+msgstr "Theme color"
+
+#: AppWindow.c:319 AppWindow.c:360 AppWindow.c:374 AppWindow.c:1903
+msgid "自定义"
+msgstr "Custom"
+
+#: AppWindow.c:335
+msgid "背景色"
+msgstr "Background color"
+
+#: AppWindow.c:336
+msgid "窗口不透明度"
+msgstr "Window opacity"
+
+#: AppWindow.c:337
+msgid "UI 隐藏/显示"
+msgstr "UI Hide/Show"
+
+#: AppWindow.c:1508
+msgctxt "Action"
+msgid "打开图片(_O)"
+msgstr "_Open Picture"
+
+#: AppWindow.c:1701
+msgctxt "AppName"
+msgid "图窗"
+msgstr "Loopicture"
+
+#: AppWindow.c:1743
+msgid "🤯 无法加载图片"
+msgstr "🤯 Unable to load picture"
+
+#. 间隔
+#: AppWindow.c:1898
+msgid "间隔："
+msgstr "Interval:"
+
+#. 模式
+#: AppWindow.c:1923
+msgid "模式："
+msgstr "Mode:"
+
+#: AppWindow.c:1926
+msgid "顺序"
+msgstr "Sequential"
+
+#: AppWindow.c:1927
+msgid "随机"
+msgstr "Random"
+
+#. 移动图片
+#: AppWindow.c:1950
+msgid "移动图片："
+msgstr "Move picture:"
+
+#: main.c:105
+msgid "退出程序"
+msgstr "Exit program"
+
+#: main.c:106
+msgid "预览图片"
+msgstr "Preview picture"

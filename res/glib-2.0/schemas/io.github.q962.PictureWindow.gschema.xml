@@ -1,0 +1,16 @@
+<schemalist>
+  <schema id="io.github.q962.PictureWindow" path="/io/github/q962/PictureWindow/">
+    <key name="opacity" type="d">
+      <default>1.0</default>
+      <summary>opacity</summary>
+    </key>
+    <key name="delay" type="u">
+      <default>3</default>
+      <summary>airtime in seconds</summary>
+    </key>
+    <key name="full-play" type="b">
+      <default>false</default>
+      <summary>Switch after media playback is complete</summary>
+    </key>
+  </schema>
+</schemalist>

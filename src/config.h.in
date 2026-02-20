@@ -1,0 +1,7 @@
+#pragma once
+
+#define G_LOG_DOMAIN "App"
+
+${define APPID}
+${define APPRESPREFIX}
+${define PROJECT_PREFIX}

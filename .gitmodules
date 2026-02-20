@@ -1,0 +1,6 @@
+[submodule "scripts/create-gobject"]
+	path = scripts/create-gobject
+	url = https://github.com/q962/create-gobject.git
+[submodule "xmake-modules"]
+	path = xmake-modules
+	url = https://github.com/q962/xmake-modules

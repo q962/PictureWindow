@@ -1,0 +1,22 @@
+# Xmake cache
+.xmake/
+build/
+.env.local
+
+node_modules
+.cache
+
+# MacOS Cache
+.DS_Store
+
+compile_commands.json
+
+.*.sw*
+
+.vite
+.vscode
+
+.env.local
+gschemas.compiled
+clipdata.db
+/scripts/archive.tar

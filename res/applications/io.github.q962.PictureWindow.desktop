@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Loopicture
+Name[zh_CN]=图窗
+Comment=Loop display picture
+Comment[zh_CN]=循环展示图片
+Exec=PictureWindow
+TryExec=PictureWindow
+Icon=io.github.q962.PictureWindow
+Terminal=false
+Type=Application
+Categories=Graphics;Viewer
+StartupNotify=true
+Keywords=picture;image;slides
+Keywords[zh_CN]=picture;image;slides;图片;幻灯片

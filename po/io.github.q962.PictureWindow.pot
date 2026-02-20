@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.q962.PictureWindow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.q962.PictureWindow\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-09 17:58+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: AppWindow.c:286
+msgid "自适应缩放"
+msgstr ""
+
+#: AppWindow.c:287
+msgid "居中"
+msgstr ""
+
+#: AppWindow.c:288
+msgid "缩放至 100%"
+msgstr ""
+
+#: AppWindow.c:305
+msgid "缩放至"
+msgstr ""
+
+#: AppWindow.c:314
+msgid "透明"
+msgstr ""
+
+#: AppWindow.c:315
+msgid "灰色"
+msgstr ""
+
+#: AppWindow.c:316
+msgid "白色"
+msgstr ""
+
+#: AppWindow.c:317
+msgid "黑色"
+msgstr ""
+
+#: AppWindow.c:318
+msgid "主题色"
+msgstr ""
+
+#: AppWindow.c:319 AppWindow.c:360 AppWindow.c:374 AppWindow.c:1903
+msgid "自定义"
+msgstr ""
+
+#: AppWindow.c:335
+msgid "背景色"
+msgstr ""
+
+#: AppWindow.c:336
+msgid "窗口不透明度"
+msgstr ""
+
+#: AppWindow.c:337
+msgid "UI 隐藏/显示"
+msgstr ""
+
+#: AppWindow.c:1508
+msgctxt "Action"
+msgid "打开图片(_O)"
+msgstr ""
+
+#: AppWindow.c:1701
+msgctxt "AppName"
+msgid "图窗"
+msgstr ""
+
+#: AppWindow.c:1743
+msgid "🤯 无法加载图片"
+msgstr ""
+
+#. 间隔
+#: AppWindow.c:1898
+msgid "间隔："
+msgstr ""
+
+#. 模式
+#: AppWindow.c:1923
+msgid "模式："
+msgstr ""
+
+#: AppWindow.c:1926
+msgid "顺序"
+msgstr ""
+
+#: AppWindow.c:1927
+msgid "随机"
+msgstr ""
+
+#. 移动图片
+#: AppWindow.c:1950
+msgid "移动图片："
+msgstr ""
+
+#: main.c:105
+msgid "退出程序"
+msgstr ""
+
+#: main.c:106
+msgid "预览图片"
+msgstr ""

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/q962/PictureWindow">
+    <file>css/main.css</file>
+    <file>ui/folder-item.ui</file>
+  </gresource>
+  <gresource prefix="/io/github/q962/PictureWindow/icons/scalable/actions">
+    <file preprocess="xml-stripblanks" alias="go-down-symbolic.svg">icons_gres/go-down-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="go-next-symbolic.svg">icons_gres/go-next-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="go-previous-symbolic.svg">icons_gres/go-previous-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="list-add-symbolic.svg">icons_gres/list-add-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="list-remove-symbolic.svg">icons_gres/list-remove-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="window-close-symbolic.svg">icons_gres/window-close-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="window-new-symbolic.svg">icons_gres/window-new-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="edit-paste-symbolic.svg">icons_gres/edit-paste-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="settings-symbolic.svg">icons_gres/settings-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="map-marker-symbolic.svg">icons_gres/map-marker-symbolic.svg</file>
+  </gresource>
+</gresources>

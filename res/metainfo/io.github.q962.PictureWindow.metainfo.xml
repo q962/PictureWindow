@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>io.github.q962.PictureWindow</id>
+	<name>Loopicture</name>
+	<name xml:lang="zh_CN">图窗</name>
+	<summary>Loop display picture</summary>
+	<summary xml:lang="zh_CN">循环展示图片</summary>
+	<description>
+		<p>This is not a full-screen slideshow</p>
+		<p xml:lang="zh_CN">这不是全屏的幻灯片</p>
+	</description>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>MIT</project_license>
+	<developer id="io.github.q962">
+		<name>q962</name>
+	</developer>
+	<content_rating type="oars-1.1" />
+	<url type="homepage">https://github.com/q962/PictureWindow</url>
+	<url type="bugtracker">https://github.com/q962/PictureWindow/issues</url>
+	<url type="vcs-browser">https://github.com/q962/PictureWindow</url>
+	<launchable type="desktop-id">io.github.q962.PictureWindow.desktop</launchable>
+	<branding>
+		<color type="primary" scheme_preference="light">#b37441</color>
+		<color type="primary" scheme_preference="dark">#3d3846</color>
+	</branding>
+	<screenshots>
+		<screenshot type="default">
+			<image>
+				https://github.com/q962/PictureWindow/raw/refs/tags/v1.0.0/data/screenshots/main.png
+			</image>
+			<caption></caption>
+			<caption xml:lang="zh_CN">Translated caption</caption>
+		</screenshot>
+		<screenshot type="default">
+			<image>
+				https://github.com/q962/PictureWindow/raw/refs/tags/v1.0.0/data/screenshots/no-titlebar.png
+			</image>
+			<caption>hide titlebar</caption>
+			<caption xml:lang="zh_CN">隐藏标题栏</caption>
+		</screenshot>
+	</screenshots>
+	<releases>
+		<release version="1.0" date="2026-03-08" />
+	</releases>
+</component>
