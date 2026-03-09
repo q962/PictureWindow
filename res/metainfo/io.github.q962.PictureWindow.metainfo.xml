@@ -28,8 +28,8 @@
 			<image>
 				https://github.com/q962/PictureWindow/raw/refs/tags/v1.0.0/data/screenshots/main.png
 			</image>
-			<caption></caption>
-			<caption xml:lang="zh_CN">Translated caption</caption>
+			<caption>Default</caption>
+			<caption xml:lang="zh_CN">默认</caption>
 		</screenshot>
 		<screenshot type="default">
 			<image>
