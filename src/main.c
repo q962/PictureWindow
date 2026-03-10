@@ -7,8 +7,6 @@
 #include "AppWindow.h"
 #include "AppFolderHistory.h"
 
-static const char** _arg_paths = NULL;
-
 GSettings* app_settings = NULL;
 
 static void _quit_app( GObject* source_object, GAsyncResult* res, gpointer application )
@@ -53,35 +51,30 @@ static void _startup( GtkApplication* application )
 
 static void _activate( GtkApplication* application )
 {
-	GtkWindow* win = gtk_application_get_window_by_id( application, 1 );
+	GtkWindow* win = ( gpointer )app_window_new( NULL );
 
-	if ( !win ) {
-		win = ( gpointer )app_window_new( _arg_paths );
-
-		gtk_application_add_window( application, win );
-	}
+	gtk_application_add_window( application, win );
 
 	gtk_window_present( win );
 }
 
-static gint _handle_command_line( GtkApplication* application, GApplicationCommandLine* command_line )
+static void _open_file( GtkApplication* application, GFile** files, gint n_files, gchar* hint, gpointer user_data )
 {
-	GVariantDict* options = g_application_command_line_get_options_dict( ( gpointer )command_line );
+	GPtrArray* file_array = g_ptr_array_new();
 
-	static gboolean is_quit = FALSE;
-	if ( is_quit )
-		return 0;
-
-	if ( g_variant_dict_lookup( options, "quit", "b", &is_quit ) ) {
-		if ( is_quit ) {
-			g_application_quit( ( gpointer )application );
-			return 0;
-		}
+	for ( int i = 0; i < n_files; i++ ) {
+		GFile* file = files[ i ];
+		g_ptr_array_add( file_array, ( gpointer )g_file_peek_path( file ) );
 	}
+	g_ptr_array_add( file_array, NULL );
 
-	g_application_activate( ( gpointer )application );
+	GtkWindow* win = ( gpointer )app_window_new( ( const char** )file_array->pdata );
 
-	return 0;
+	g_ptr_array_unref( file_array );
+
+	gtk_application_add_window( application, win );
+
+	gtk_window_present( win );
 }
 
 int main( int argc, char** argv )
@@ -94,23 +87,18 @@ int main( int argc, char** argv )
 
 	app_settings = g_settings_new( APPID );
 
-	GtkApplication* app = gtk_application_new( APPID, G_APPLICATION_HANDLES_COMMAND_LINE );
+	GtkApplication* app = gtk_application_new( APPID, G_APPLICATION_HANDLES_OPEN | G_APPLICATION_NON_UNIQUE );
 
 	setlocale( LC_ALL, "" );
 	bindtextdomain( GETTEXT_PACKAGE, app_share_path( "locale", NULL ) );
 	bind_textdomain_codeset( GETTEXT_PACKAGE, "UTF-8" );
 	textdomain( GETTEXT_PACKAGE );
 
-	GOptionEntry entries[] = {
-		{ "quit", 'q', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, NULL, _( "退出程序" ), NULL },
-		{ "path", 'p', G_OPTION_FLAG_NONE, G_OPTION_ARG_FILENAME_ARRAY, &_arg_paths, _( "预览图片" ), NULL },
-		G_OPTION_ENTRY_NULL
-	};
-	g_application_add_main_option_entries( ( gpointer )app, entries );
+	g_application_set_version( ( gpointer )app, "1.0.0" );
 
 	g_signal_connect( app, "startup", G_CALLBACK( _startup ), NULL );
 	g_signal_connect( app, "activate", G_CALLBACK( _activate ), NULL );
-	g_signal_connect( app, "command_line", G_CALLBACK( _handle_command_line ), NULL );
+	g_signal_connect( app, "open", G_CALLBACK( _open_file ), NULL );
 
 	g_application_run( ( gpointer )app, argc, argv );
 
