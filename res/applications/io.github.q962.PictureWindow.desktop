@@ -9,6 +9,7 @@ Icon=io.github.q962.PictureWindow
 Terminal=false
 Type=Application
 Categories=Graphics;Viewer
+MimeType=image/apng;image/avif;image/bmp;image/gif;image/heif;image/jp2;image/jpeg;image/jxl;image/png;image/qoi;image/svg+xml;image/svg+xml-compressed;image/tiff;image/vnd.microsoft.icon;image/webp
 StartupNotify=true
 Keywords=picture;image;slides
 Keywords[zh_CN]=picture;image;slides;图片;幻灯片
