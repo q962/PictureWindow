@@ -6,6 +6,7 @@ set_version("0.0.1")
 APPID = "io.github.q962.PictureWindow"
 APPRESPREFIX = "/io/github/q962/PictureWindow/"
 
+set_config("APPID", APPID)
 set_configvar("APPID", APPID)
 set_configvar("APPRESPREFIX", APPRESPREFIX)
 set_configvar("PROJECT_PREFIX", "$(projectdir)/res")
