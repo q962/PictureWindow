@@ -9,7 +9,8 @@ APPRESPREFIX = "/io/github/q962/PictureWindow/"
 set_config("APPID", APPID)
 set_configvar("APPID", APPID)
 set_configvar("APPRESPREFIX", APPRESPREFIX)
-set_configvar("PROJECT_PREFIX", "$(projectdir)/res")
+
+option("ENABLE_PROJECT_PREFIX", { default = false, description = "", defines = { "ENABLE_PROJECT_PREFIX", "PROJECT_PREFIX=\"$(projectdir)/res\"" } })
 
 add_rules("mode.debug", "mode.release", "mode.releasedbg")
 
@@ -28,6 +29,7 @@ do
     add_configfiles("src/config.h.in")
 
     add_rules("gnome")
+    add_options("ENABLE_PROJECT_PREFIX")
 
     add_files("src/**.c")
 

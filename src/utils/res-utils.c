@@ -122,9 +122,8 @@ const char* app_prefix_path( const char* path, ... )
 	if ( g_once_init_enter_pointer( ( gpointer* )&prefix_path ) ) {
 		GString* str = g_string_new( NULL );
 
-#ifdef DEBUG
-		const char* path = g_getenv( "PROJECT_PREFIX" );
-		g_string_append( str, path ? path : PROJECT_PREFIX );
+#ifdef ENABLE_PROJECT_PREFIX
+ 		g_string_append( str, PROJECT_PREFIX );
 #else
 
 #if defined( PREFIX )
@@ -216,7 +215,7 @@ const char* app_share_path( const char* path, ... )
 	if ( g_once_init_enter_pointer( ( gpointer* )&share_path ) ) {
 		GString* str = g_string_new( NULL );
 
-#ifdef DEBUG
+#ifdef ENABLE_PROJECT_PREFIX
 		const char* prefix_path = app_prefix_path( NULL );
 #else
 		const char* prefix_path = app_prefix_path( "share", NULL );

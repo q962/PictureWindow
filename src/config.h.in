@@ -4,4 +4,3 @@
 
 ${define APPID}
 ${define APPRESPREFIX}
-${define PROJECT_PREFIX}
