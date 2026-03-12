@@ -6,6 +6,7 @@
 #include "AppEntry.h"
 #include "AppFolderHistory.h"
 #include "AppPictureList.h"
+#include "utils/utils.h"
 
 #if 1  // static function
 
@@ -1280,41 +1281,6 @@ static void _clipboard_read_file_list_finish( GObject* source, GAsyncResult* res
 
 	GSList* file_list = gdk_file_list_get_files( value_var );
 
-	// https://gnome.pages.gitlab.gnome.org/glycin/#supported-image-formats
-	GRegex* test = g_regex_new( "\\.("
-	                            "avif"
-	                            "|bmp"
-	                            "|cr2"
-	                            "|dds"
-	                            "|dng"
-	                            "|erf"
-	                            "|exr"
-	                            "|gif"
-	                            "|heic"
-	                            "|ico"
-	                            "|jpe?g"
-	                            "|jxl"
-	                            "|mrw"
-	                            "|orf"
-	                            "|pbm"
-	                            "|pef"
-	                            "|pgm"
-	                            "|png"
-	                            "|ppm"
-	                            "|qoi"
-	                            "|rw2?"
-	                            "|srf"
-	                            "|svgz?"
-	                            "|tga"
-	                            "|tiff?"
-	                            "|webp"
-	                            "|xbm"
-	                            "|xpm"
-	                            ")$",
-	                            G_REGEX_CASELESS | G_REGEX_OPTIMIZE,
-	                            0,
-	                            NULL );
-
 	gboolean list_count = app_picture_list_n_items( self->picture_list );
 
 	GPtrArray* file_array = g_ptr_array_new();
@@ -1323,7 +1289,7 @@ static void _clipboard_read_file_list_finish( GObject* source, GAsyncResult* res
 		GFile*      file = item->data;
 		const char* path = g_file_peek_path( file );
 
-		if ( g_regex_match( test, path, 0, NULL ) ) {
+		if ( _is_glycin_format( path ) ) {
 			g_ptr_array_add( file_array, ( gpointer )path );
 		}
 	}
@@ -1336,8 +1302,6 @@ static void _clipboard_read_file_list_finish( GObject* source, GAsyncResult* res
 
 	g_slist_free( file_list );
 	g_ptr_array_unref( file_array );
-
-	g_regex_unref( test );
 }
 
 static void _clipboard_read_texture_finish( GObject* source, GAsyncResult* result, gpointer user_data )

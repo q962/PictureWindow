@@ -1,4 +1,5 @@
 #include "AppPictureList.h"
+#include "utils/utils.h"
 
 #if 1  // gobject definition :: AppPictureList
 
@@ -136,20 +137,7 @@ void app_picture_list_load( AppPictureList* self, const char* path )
 				g_string_set_size( path_concat, path_len );
 				g_string_append_printf( path_concat, "/%s", name );
 
-				gboolean is_media = FALSE;
-
-				const char* dot_p = strrchr( name, '.' );
-				if ( dot_p ) {
-					is_media = g_str_has_suffix( dot_p, ".jpg" )      //
-					           || g_str_has_suffix( dot_p, ".png" )   //
-					           || g_str_has_suffix( dot_p, ".gif" )   //
-					           || g_str_has_suffix( dot_p, ".jpeg" )  //
-					           || g_str_has_suffix( dot_p, ".webp" )  //
-					           || g_str_has_suffix( dot_p, ".svg" )   //
-					           || g_str_has_suffix( dot_p, ".svgz" )  //
-					           || g_str_has_suffix( dot_p, ".t" );
-				}
-				if ( is_media ) {
+				if ( _is_glycin_format( path_concat->str ) ) {
 					g_ptr_array_add( self->picture_list, g_strdup( path_concat->str ) );
 				}
 			}

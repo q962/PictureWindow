@@ -25,21 +25,15 @@ modules:
 
   - name: PictureWindow
     buildsystem: simple
+    build-options:
+      env:
+        XMAKE_GLOBALDIR: xmake-global
+        XMAKE_ROOT: y
     build-commands:
-      - |
-        set -e
-
-        export XMAKE_GLOBALDIR=/run/temp/xmake
-        export XMAKE_ROOT=y
-        xmake g --network=private
-
-        xmake f --mode=releasedbg
-        xmake b
-        xmake install -o /app
-
-        eu-unstrip /app/bin/PictureWindow /app/bin/PictureWindow.sym -o PictureWindow
-        mv PictureWindow /app/bin
-        rm /app/bin/*.sym
+      - xmake g --network=private
+      - xmake f --mode=debug
+      - xmake b -vD
+      - xmake install -o /app
     sources:
       - type: file
         path: archive.tar
