@@ -1,0 +1,106 @@
+:root {
+  --theme-font-color: #222226;
+  --theme-color: #f0f0f0;
+  --header-bg: rgba(255, 255, 255, 0.5);
+  --button-group-bg: rgba(255, 255, 255, 0.4);
+  --button-bg: rgba(0, 0, 0, 0.1);
+  --button-border-color: rgba(255, 255, 255, 0.6);
+  --headerbar-item-bg: rgba(255, 255, 255, 0.2);
+  --headerbar-item-bg-active: rgba(255, 255, 255, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-font-color: #f0f0f0;
+    --theme-color: #222226;
+    --header-bg: rgba(0, 0, 0, 0.5);
+    --button-group-bg: rgba(0, 0, 0, 0.4);
+    --button-bg: rgba(255, 255, 255, 0.1);
+    --button-border-color: rgba(0, 0, 0, 0.6);
+    --headerbar-item-bg: rgba(0, 0, 0, 0.2);
+    --headerbar-item-bg-active: rgba(0, 0, 0, 0.4);
+  }
+}
+.AppWindow {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 12px;
+}
+.AppWindow > .menu {
+  padding: 5px;
+}
+.AppWindow.theme-bg {
+  background-color: var(--theme-color);
+}
+.AppWindow.setup headerbar {
+  background-color: transparent;
+}
+.AppWindow headerbar {
+  background-color: var(--header-bg);
+  border: unset;
+  background-image: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hide_map_btn {
+  margin-right: 8px;
+  margin-top: 8px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+.hide_map_btn:hover, .hide_map_btn:focus-visible {
+  opacity: 1;
+}
+
+AppViewNavigator {
+  background-color: var(--theme-color);
+  border-radius: 12px;
+  box-shadow: 0 0 12px white, 0 0 12px black;
+}
+
+.controller_bar {
+  padding: 8px;
+}
+
+.button-group {
+  background-color: var(--button-group-bg);
+  padding: 6px;
+  border-radius: 10px;
+}
+.button-group > button:hover, .button-group > button:focus-within {
+  background-color: var(--button-bg);
+}
+.button-group > button {
+  background-image: unset;
+  border: unset;
+}
+
+headerbar .headerbar-item {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 3px;
+}
+headerbar .headerbar-item:hover {
+  background-color: var(--headerbar-item-bg);
+  border: 1px solid var(--button-border-color);
+}
+headerbar .headerbar-item:active {
+  background-color: var(--headerbar-item-bg-active);
+}
+headerbar button {
+  background-image: unset;
+  background-color: unset;
+  padding: 2px;
+  border-radius: 5px;
+  border: 0;
+  margin: 0;
+}
+
+button.open-image-file {
+  padding: 1em 2em;
+  border-radius: 99999px;
+  transition: background-color 0.2s;
+}
+
+.load-failed {
+  font-size: 1.5em;
+}

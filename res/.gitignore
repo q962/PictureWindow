@@ -1,3 +1,4 @@
 /locale
 /css/*
 !/css/*.scss
+!/css/*.css
